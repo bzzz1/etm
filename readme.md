@@ -1,27 +1,38 @@
-## Laravel PHP Framework
+# VEC(ETM)
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Overview and results of client meetings
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+### 16.07.2015 Initil meeting
 
-## Official Documentation
+#### Main descrtiption
+1.One catalog near 100000 items
+2.AJAX page load
+3.Sort by name and price
+4.Cart
+5.Import from price
+6.With unlit categories and filters
+7.Main design concept - as on em.ru
+8.Search by name and code wanted
+9.News
+10.Articles
+11.DB export to excel 
+12.Adaptive mockup for tablets
+13.5000 users a day
+14.Payment system(commented)
+15.Feedback form
+16.Oder form
+17.Have all data
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+#### Really hard shit
+1.Unlimited filters
+2.Unlimited categories
+3.Robokassa
+4.Import from letter
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+#### Additional features
+1.All registered users to excel file
+2.3 times per day import
+3.Watermark(2 file copies)
+4.Fotorama for item
+5.Import from letter
