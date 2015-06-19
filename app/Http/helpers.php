@@ -2,38 +2,90 @@
 
 	function v() {
 		$route_views = [
-			'add_estate'		=> 'admin/estate_add',
-			'create_estate'		=> null,
-			'admin_estates'		=> 'admin/estates',
-			'estates'			=> 'estates',
-			'estate'			=> 'estate',
-			'selected'			=> 'estates',
-			'select_estate' 	=> null,
-			'chnage_estate' 	=> 'admin/estate_change',
-			'update_estate' 	=> null,
-			'delete_estate' 	=> null,
+			// ITEMS
+			'add_item'		=> 'admin/add_item',
+			'create_item'	=> null,
+			'admin_items'	=> 'admin/items',
+			'ajax_items'	=> null,
+			'items'			=> 'items',
+			'item'			=> 'item',
+			'chnage_item' 	=> 'admin/change_item',
+			'update_item' 	=> null,
+			'delete_item' 	=> null,
+
+			// ARTICLES
+			'add_article'		=> 'admin/add_article',
 			'create_article'	=> null,
 			'admin_articles'	=> 'admin/articles',
-			'add_article'		=> 'admin/article_add',
 			'articles'			=> 'articles',
 			'article'			=> 'article',
-			'update_article'	=> 'admin/article_change',
-			'delete_article'	=> null,
-			'create_town'		=> null,
-			'admin_towns'		=> 'admin/towns',
-			'update_town'		=> null,
-			'delete_town'		=> null,
-			'create_district'	=> null,
-			'admin_districts'	=> 'admin/districts',
-			'update_district'	=> null,
-			'delete_district'	=> null,
-			'how_to'			=> 'how_to',
-			'rent_sale'			=> 'rent_sale',
-			'contacts'			=> 'contacts',
-			'admin'				=> 'admin/admin',
-			'login'				=> 'admin/login',
-			'logging'			=> null,
-			'logout'			=> null,
+			'chnage_article' 	=> 'admin/change_article',
+			'update_article' 	=> null,
+			'delete_article' 	=> null,
+
+			// NEWS
+			'add_new'		=> 'admin/add_new',
+			'create_new'	=> null,
+			'admin_news'	=> 'admin/news',
+			'news'			=> 'news',
+			'new'			=> 'new',
+			'chnage_new' 	=> 'admin/change_new',
+			'update_new' 	=> null,
+			'delete_new' 	=> null,
+
+			// PRODUCERS
+			'create_producer'	=> null,
+			'admin_producers'	=> 'admin/producers',
+			'update_producer' 	=> null,
+			'delete_producer' 	=> null,
+
+			// ORDERS
+			'admin_orders'	=> 'admin/orders',
+			'delete_order' 	=> null,
+
+			// UNITS
+			'create_unit'	=> null,
+			'admin_units'	=> 'admin/units',
+			'update_unit' 	=> null,
+			'delete_unit' 	=> null,
+
+			// FEEDBACKS
+			'admin_feedbacks'	=> 'admin/feedbacks',
+			'delete_feedback' 	=> null,
+
+			// KINDS
+			'create_kind'	=> null,
+			'admin_kinds'	=> 'admin/kinds',
+			'update_kind' 	=> null,
+			'delete_kind' 	=> null,
+
+			// FILTERS
+			'create_kind'	=> null,
+			'admin_kinds'	=> 'admin/kinds',
+			'update_kind' 	=> null,
+			'delete_kind' 	=> null,
+
+			// USERS
+			'admin_users'	=> 'admin_users',
+
+			// STATIC PAGES
+			'delivery'		=> 'delivery',				
+			'about'			=> 'about',	
+			'contacts'		=> 'contacts',	
+			'order_page'	=> 'order_page',
+
+			// INTERACTIONS
+			'admin'			=> 'admin',
+			'admin_login'	=> 'admin_login'
+			'admin_logging'	=> null,
+			'admin_logout'	=> null,
+			'logging'		=> null,
+			'logout'		=> null,
+			'cabinet'		=> 'cabinet',
+			'registration'	=> null,
+			'forgot_pass'	=> null,
+			'feedback'		=> null,
+			'order'			=> null,
 		];
 
 		return view($route_views[Route::currentRouteName()]);

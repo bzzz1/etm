@@ -201,6 +201,7 @@ return [
 		'Carbon' 	=> 'Carbon\Carbon',
 		'Faker'		=> 'Faker\Factory',
 
+
 		/*------------------------------------------------
 		| MODELS
 		------------------------------------------------*/
@@ -209,7 +210,7 @@ return [
 		'District'  => 'App\District',
 		'Town'  	=> 'App\Town',
 		'Article'   => 'App\Article',
-		'User'		=> 'App\User'
+		'User'		=> 'App\User',
 	],
 
 ];
