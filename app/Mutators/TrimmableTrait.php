@@ -1,4 +1,4 @@
-<?php namespace Mutators;
+<?php namespace App\Mutators;
 
 trait TrimmableTrait {
 	public static function boot() {

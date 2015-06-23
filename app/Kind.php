@@ -2,9 +2,17 @@
 
 use App\BaseModel;
 
-class Image extends BaseModel {
+class Kind extends BaseModel {
 	public 	  $timestamps = false;
 	protected $guarded = [];
-	protected $primaryKey = 'image_id';
+	protected $primaryKey = 'article_id';
 	protected $trimmed = [];
+
+	function top2() {
+
+	}
+
+	function every() {
+		
+	}
 }

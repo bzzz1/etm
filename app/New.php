@@ -2,9 +2,9 @@
 
 use App\BaseModel;
 
-class Image extends BaseModel {
+class New extends BaseModel {
 	public 	  $timestamps = false;
 	protected $guarded = [];
-	protected $primaryKey = 'image_id';
+	protected $primaryKey = 'article_id';
 	protected $trimmed = [];
 }

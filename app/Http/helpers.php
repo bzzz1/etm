@@ -1,5 +1,57 @@
 <?php
 
+// Cart
+// Filters
+// Kinds
+// Emails
+// Recents
+// Request Validation
+
+
+// php artisan make:controller MainController
+// php artisan make:controller ItemController
+// php artisan make:controller ArticleController
+// php artisan make:controller NewController
+// php artisan make:controller ProducerController
+// php artisan make:controller OrderController
+// php artisan make:controller UnitController
+// php artisan make:controller FeedbackController
+// php artisan make:controller KindController
+// php artisan make:controller UserController
+// php artisan make:controller FilterController
+
+// php artisan make:model Image
+// php artisan make:model Item
+// php artisan make:model Article
+// php artisan make:model New
+// php artisan make:model Producer
+// php artisan make:model Order
+// php artisan make:model Unit
+// php artisan make:model Feedback
+// php artisan make:model User
+// php artisan make:model Kind
+// php artisan make:model Filter
+
+// php artisan make:migration create_filter_kind_table
+
+// php artisan migrate:install
+// models extends BaseModel
+// create Facades for Models
+
+// 'Image'		=> 'App\Image',
+// 'Item'		=> 'App\Item',
+// 'Article'	=> 'App\Article',
+// 'New'		=> 'App\New',
+// 'Producer'	=> 'App\Producer',
+// 'Order'		=> 'App\Order',
+// 'Unit'		=> 'App\Unit',
+// 'Feedback'	=> 'App\Feedback',
+// 'User'		=> 'App\User',
+// 'Kind'		=> 'App\Kind',
+// 'Filter'	=> 'App\Filter',
+
+// app()->make('App\Http\Controllers\FilterController');
+
 	function v() {
 		$route_views = [
 			// ITEMS
@@ -42,6 +94,7 @@
 			// ORDERS
 			'admin_orders'	=> 'admin/orders',
 			'delete_order' 	=> null,
+			'order'			=> null,
 
 			// UNITS
 			'create_unit'	=> null,
@@ -52,6 +105,7 @@
 			// FEEDBACKS
 			'admin_feedbacks'	=> 'admin/feedbacks',
 			'delete_feedback' 	=> null,
+			'feedback'			=> null,
 
 			// KINDS
 			'create_kind'	=> null,
@@ -67,6 +121,12 @@
 
 			// USERS
 			'admin_users'	=> 'admin_users',
+			'logging'		=> null,
+			'logout'		=> null,
+			'cabinet'		=> 'cabinet',
+			'forgot_pass'	=> null,
+			'register_page' => 'register_page',
+			'registration'	=> null,
 
 			// STATIC PAGES
 			'delivery'		=> 'delivery',				
@@ -75,17 +135,12 @@
 			'order_page'	=> 'order_page',
 
 			// INTERACTIONS
-			'admin'			=> 'admin',
-			'admin_login'	=> 'admin_login'
+			'admin'			=> 'admin/admin',
+			'admin_catalog' => 'admin/admin_catalog',
+			'admin_login'	=> 'admin/admin_login',
 			'admin_logging'	=> null,
 			'admin_logout'	=> null,
-			'logging'		=> null,
-			'logout'		=> null,
-			'cabinet'		=> 'cabinet',
-			'registration'	=> null,
-			'forgot_pass'	=> null,
-			'feedback'		=> null,
-			'order'			=> null,
+			'search'		=> 'items',
 		];
 
 		return view($route_views[Route::currentRouteName()]);
@@ -412,112 +467,3 @@
 		];
 		return $filter_types[$filter];
 	}
-
-	// function urlencode2($string) {
-	// 	$string = urlencode($string);
-	// 	$string = str_replace("%2F", "-", $string);
-	// 	return $string;
-	// }
-
-	// public static function flat_array($arr) {
-	// 	$output = [];
-	// 	foreach($arr as $key => $val) {
-	// 		if (is_array($val)) {
-	// 			$output = array_merge($output, $val);
-	// 		} else {
-	// 			$output[$key] = $val;
-	// 		}
-	// 	}
-	// 	return $output;
-	// }
-
-	// private static function tofloat($num) {
-	// 	$dotPos = strrpos($num, '.');
-	// 	$commaPos = strrpos($num, ',');
-	// 	$sep = (($dotPos > $commaPos) && $dotPos) ? $dotPos : 
-	// 		((($commaPos > $dotPos) && $commaPos) ? $commaPos : false);
-
-	// 	if (!$sep) {
-	// 		return floatval(preg_replace("/[^0-9]/", "", $num));
-	// 	} 
-
-	// 	return floatval(
-	// 		preg_replace("/[^0-9]/", "", substr($num, 0, $sep)) . '.' .
-	// 		preg_replace("/[^0-9]/", "", substr($num, $sep+1, strlen($num)))
-	// 	);
-	// }
-
-	// public static function url_slug(array $arr) {
-	// 	$url = '';
-	// 	foreach ($arr as $chunk) {
-	// 		if ($chunk == '/') {
-	// 			$url .= $chunk;
-	// 		} else {
-	// 			$url .= static::url_slug_chunk($chunk);
-	// 		}
-	// 	}
-		
-	// 	return $url;
-	// }
-
-	// public static function sendMail($data, $subject, $view, $email=null) {
-	// 	if (! $email) {
-	// 		$email = HELP::$admin_email;
-	// 	}
-
-	// 	$mail = new PHPMailer;
-	// 	$mail->CharSet = "UTF-8";
-
-	// 	$mail->isSMTP(); // Set mailer to use SMTP
-	// 	$mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers
-	// 	$mail->SMTPAuth = true; // Enable SMTP authentication
-	// 	$mail->Username = HELP::$site_email; // SMTP username
-	// 	$mail->Password = HELP::$site_password; // SMTP password
-	// 	$mail->SMTPSecure = 'tls'; // Enable encryption, 'ssl' also accepted
-	// 	$mail->Port = 587;         // TCP port to connect to
-
-	// 	// $mail->From = 'sportsecretshop@gmail.com';
-	// 	$mail->From = 'ZIPO';
-	// 	$mail->FromName = 'Zipo';
-	// 	$mail->addAddress($email); // Add a recipient
-	// 	// $mail->addAddress('ellen@example.com'); // Name is optional
-	// 	// $mail->addReplyTo('info@example.com', 'Information');
-	// 	// $mail->addCC('cc@example.com');
-	// 	// $mail->addBCC('bcc@example.com');
-
-	// 	// $mail->WordWrap = 50; // Set word wrap to 50 characters
-	// 	// $mail->addEmbeddedImage('public/img/vsx15.jpg', 'embed_1'); // Add attachments
-	// 	// $mail->addAttachment('public/img/vsx15.jpg', ''); // Add attachments
-	// 	// $mail->addAttachment('/tmp/image.jpg', 'new.jpg'); // Optional name
-	// 	$mail->isHTML(true); // Set email format to HTML
-
-	// 	// $mail->Subject = 'Заказ оформлен';
-	// 	$mail->Subject = $subject;
-	// 	$mail->Body = View::make($view, $data);
-	// 	// $mail->Body = 'This is the HTML message body <b>in bold!</b>';
-	// 	// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-	// 	if ( ! $mail->send()) {
-	// 		echo 'Message could not be sent.';
-	// 		echo 'Mailer Error: ' . $mail->ErrorInfo;
-	// 	}
-	// }
-
-	// public static function __delete($Model, $message, $title, $redirect='back') {
-	// 	$instance = new $Model; // create instance to get primaryKey
-	// 	$object_id = Input::get($instance->primaryKey);
-	// 	$object = $Model::find($object_id);
-	// 	$Model::destroy($object_id);
-	// 	$message = sprintf($message, $object->$title);
-
-	// 	if ($redirect =='back') {
-	// 		return Redirect::back()->with('message', $message);
-	// 	} else {
-	// 		return Redirect::to($redirect)->with('message', $message);
-	// 	}
-	// }
-
-	// public static function formatDate($date) {
-	// 	$newDate = date("d-m-Y", strtotime($date));
-	// 	return $newDate;
-	// }

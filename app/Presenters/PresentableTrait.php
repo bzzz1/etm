@@ -1,4 +1,4 @@
-<?php namespace Presenters;
+<?php namespace App\Presenters;
 
 trait PresentableTrait {
 	public function __get($key) {

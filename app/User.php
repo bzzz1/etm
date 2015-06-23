@@ -10,25 +10,10 @@ class User extends BaseModel implements AuthenticatableContract, CanResetPasswor
 
 	use Authenticatable, CanResetPassword;
 
-	/**
-	 * The database table used by the model.
-	 *
-	 * @var string
-	 */
 	protected $table = 'users';
-
-	/**
-	 * The attributes that are mass assignable.
-	 *
-	 * @var array
-	 */
-	protected $fillable = ['name', 'email', 'password'];
-
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
-	protected $hidden = ['password', 'remember_token'];
-
+	protected $primaryKey = 'user_id';
+	public 	  $timestamps = false;
+	protected $guarded = ['admin'];
+	protected $trimmed = [];
+	protected $hidden = ['password', 'remember_token', 'admin']; // excluded from the model's JSON
 }

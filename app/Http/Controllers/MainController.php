@@ -1,17 +1,21 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
-use Mail;
+use Kind;
 use Request;
 
 class MainController extends Controller {
-	public function how_to() {
+	public function index() {
+		$kinds = Kind::top2();
+		return v()->with(compact('kinds'));
+	}
+
+	public function delivery() {
 		return v();
 	}
 
-	public function rent_sale() {
+	public function about() {
 		return v();
 	}
 
@@ -19,15 +23,22 @@ class MainController extends Controller {
 		return v();
 	}
 
+	// ADMIN
 	public function admin() {
 		if (Auth::check()) {
 			return v();
 		} else {
-			 return redirect()->route('login');
+			return redirect()->route('admin_login');
 		}
 	}
 
-	public function login() {
+	public function admin_catalog() {
+		$kinds = Kind::every();
+		return v()->with(compact('kinds'));
+	}
+
+	// ADMIN
+	public function admin_login() {
 		if (Auth::check()) {
 			return redirect()->route('admin');
 		} else {
@@ -35,7 +46,8 @@ class MainController extends Controller {
 		}
 	}
 
-	public function logging() {
+	// ADMIN
+	public function admin_logging() {
 		$data = Request::all();
 		unset($data['_token']);
 
@@ -43,32 +55,25 @@ class MainController extends Controller {
 		if ($pass) {
 			return redirect()->route('admin');
 		} else {
-			return redirect()->route('login')->withErrors('Неверный логин или пароль!');
+			return redirect()->route('admin_login')->withErrors('Неверный логин или пароль!');
 		}
 	}
 
-	public function logout() {
+	// ADMIN
+	public function admin_logout() {
 		Auth::logout();
-		return redirect()->route('login');
+		return redirect()->route('admin_login');
 	}
 
-	public function feedback() {
-		$data = Request::all();
+	public function search() {
+		$kind_id = Request::input('kind_id');
+		$param = Request::input('param');
+		if (! empty($kind_id)) {
+			$items = Item::joined()->byKind($kind_id)->search($param)->get();
+		} else {
+			$items = Item::joined()->search($param)->get();
+		}
 
-		Mail::send('emails.feedback', $data, function ($mail) use ($data) {
-			$mail->to($data['email'], $data['name'])->subject('');
-		});
-
-		return redirect()->back()->with('message', '');
-	}
-
-	public function order() {
-		$data = Request::all();
-
-		Mail::send('emails.order', $data, function ($mail) use ($data) {
-			$mail->to($data['email'], $data['name'])->subject('');
-		});
-
-		return redirect()->back()->with('message', '');
+		return v()->with(compact('items'));
 	}
 }
