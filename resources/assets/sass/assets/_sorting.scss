@@ -1,0 +1,37 @@
+.sorting {
+	// width: $catalog_inline_width;
+	border: 1px solid #e5e5e5;
+	// display: inline-block;
+	// float: right;
+	padding: 13px 22px 0px 22px;
+	margin-bottom: 14px;
+	border-radius: 5px;
+	p {
+		font-size: 18px;
+		color: $main_black;
+		display: inline-block;
+	}
+	.heading {
+		float: left;
+		margin-right: 65px;
+	}
+	.by_price,
+	.by_name {
+		display: inline-block;
+		.fa {
+			margin-right: 20px;
+			cursor: pointer;
+		}
+	} 
+	.by_price {
+		margin-right: 41px;
+		p {
+			margin-right: 30px;
+		}
+	}
+	.by_name {
+		p {
+			margin-right: 20px;
+		}
+	}
+}

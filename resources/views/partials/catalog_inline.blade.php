@@ -1,4 +1,17 @@
 <div class="catalog_inline">
+	<div class="sorting">
+		<p class="heading">Сортировать</p>
+		<div class="by_price">
+			<p>по цене:</p>
+			<i class="fa fa-sort-numeric-asc fa-lg"></i>
+			<i class="fa fa-sort-numeric-desc fa-lg"></i>
+		</div>
+		<div class="by_name">
+			<p>по наименованию:</p>
+			<i class="fa fa-sort-alpha-asc fa-lg"></i>
+			<i class="fa fa-sort-alpha-desc fa-lg"></i>
+		</div>
+	</div>
 	<div class="item">
 		<div class="title_block">
 			<a href="#">
