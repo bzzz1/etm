@@ -120,7 +120,7 @@
 			'delete_kind' 	=> null,
 
 			// USERS
-			'admin_users'	=> 'admin_users',
+			'admin_users'	=> 'admin/users',
 			'logging'		=> null,
 			'logout'		=> null,
 			'cabinet'		=> 'cabinet',
@@ -136,8 +136,8 @@
 
 			// INTERACTIONS
 			'admin'			=> 'admin/admin',
-			'admin_catalog' => 'admin/admin_catalog',
-			'admin_login'	=> 'admin/admin_login',
+			'admin_catalog' => 'admin/catalog',
+			'admin_login'	=> 'admin/login',
 			'admin_logging'	=> null,
 			'admin_logout'	=> null,
 			'search'		=> 'items',

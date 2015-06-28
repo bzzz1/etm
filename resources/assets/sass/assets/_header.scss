@@ -1,73 +1,105 @@
+.pre_full {
+	width: 100%;
+	background-color: $main_blue;
+}
 .container_header {
-	width: $containers_width;
+	width: $main_width;
 	display: table;
 	margin: auto;
-	padding: 25px 20px 25px 20px;
-	.logo {
-		display: inline-block;
+}
+.pre_header {
+	padding: 12px 16px 9px 11px;
+	overflow: hidden;
+	p,
+	a,
+	.fa {
+		color: #fff;
+	}
+	a {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+.log_in {
+	float: left;
+	.enter {
 		float: left;
-		background-color: #fff;
-	}
-	.descript {
-		float: left;
-		display: inline-block;
-		overflow: hidden;
-		color: $main_blue;
-		font-size: 24px;
-		font-weight: 400;
-		margin-top: 50px;
-		max-width: 300px;
-		p {
-			margin-bottom: 0;
+		margin-right: 60px;
+		margin-top: 3px;
+		.fa-user {
+			margin-right: 14px;
+			vertical-align: initial;
 		}
 	}
-	.contacts {
-		display: inline-block;
-		color: $main_black;
-		font-size: 24px;
-		margin-top: 50px;
-		margin-left: 45px;
-		p {
-			font-weight: 400;
-			display: inline-block;
-			vertical-align: bottom;
-		}
-		i {
-			color: $main_blue;
-			vertical-align: super;
-			margin-left: 15px;
-		}
-	}
-	.socials {
+	.register {
 		float: right;
-		padding-top: 10px;
-		i {
-			color: $main_black;
-			margin-left: 17px;
-			margin-bottom: 10px;
-			&:hover {
-				color: $main_green;
-			}
+		.fa-key {
+			margin-left: 11px;
+			vertical-align: super;
 		}
-		.fa-heart {
-			color: $main_blue;
+	}
+}
+.right {
+	float: right;
+	margin-top: 3px;
+	.devivery_info {
+		float: left;
+		margin-right: 50px;
+		.fa-truck {
+			margin-right: 15px;
+		}
+	}
+	.chart_top {
+		float: right;
+		.chart_ico {
 			float: left;
-			margin: 60px 0px 0 0;
-			&:hover {
-				color: $main_blue;
+			.fa-shopping-cart {
+				margin-right: 11px;
 			}
 		}
 		.counter {
-			font-size: 20px;
-			margin-left: 80px;
+			float: right;
+		}
+	}
+}
+.main_header {
+	padding: 14px 45px ;
+	overflow: hidden;
+	.logo {
+		display: block;
+		float: left;
+	}
+	.descript {
+		display: inline-block;
+		margin-top: 52-14px;
+		margin-left: 49px;
+		p {
+			font-weight: 200;
+			font-size: 24px;
+			color: $main_black;
+			margin-bottom: 0;
+			line-height: 1;
+		}
+	}
+	.contacts {
+		float: right;
+		margin-top: 46-14px;
+		.phone {
+			font-size: 30px;
+			color: $main_blue;
+			margin-bottom: 0;
+			line-height: 1.3;
+		}
+		.delivery_description {
+			margin-top: 14px;
 			p {
+				color: $main_black;
+				font-size: 16px;
+				font-weight: 200;
+				line-height: 1;
 				margin-bottom: 0;
-			}
-			a {
-				color: inherit;
-				text-decoration: underline;
 			}
 		}
 	}
 }
-
