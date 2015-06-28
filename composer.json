@@ -8,11 +8,11 @@
 		"laravel/framework": "5.0.*",
 		"doctrine/dbal": "2.6.*@dev",
 		"illuminate/html": "5.0.*@dev",
-		"phpunit/phpunit": "dev-master",
-		"fzaninotto/faker": "~1.4"
+		"fzaninotto/faker": "~1.4",
+		"devfactory/taxonomy": "^3.0",
+		"phpunit/phpunit": "^4.7"
 	},
 	"require-dev": {
-		"phpunit/phpunit": "~4.0",
 		"phpspec/phpspec": "~2.1"
 	},
 	"autoload": {
