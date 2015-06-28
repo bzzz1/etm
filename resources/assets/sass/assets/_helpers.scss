@@ -1,7 +1,16 @@
 .main_content {
 	width: $main_width;
-	display: table;
-	margin: auto;
+	// display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 62px;
+	background-color: #f4f4f4;
+}
+.uni_heading {
+	text-transform: uppercase;
+	color: $main_blue;
+	font-size: 28px;
+	margin-bottom: 14px;
 }
 .full_screen {
 	display: table;
@@ -50,8 +59,8 @@
 	overflow: hidden;
 	display: table;
 	margin: auto;
-	padding: 35px 30px;
-	font-size: 22px;
+	// padding: 35px 30px;
+	font-size: 14px;
 	color: $main_black;
 	.left_text,
 	.right_text {
@@ -66,4 +75,12 @@
 		float: left;
 	}
 }
-	
+.breadcrumb {
+	margin-bottom: 51px;
+	padding-left: 0;
+	li {
+		a {
+			color: $main_blue;
+		}
+	}
+}	

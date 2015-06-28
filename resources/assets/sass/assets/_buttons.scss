@@ -12,11 +12,15 @@
 $btn_col: lighten($main_blue, 10%);
 .more_btn {
 	@include btn(#fff, $btn_col, 24px, $btn_col);
-	display: table;
-	margin:auto;
-	margin-top: 20px;
-	padding-left: 40px;
-	padding-right: 40px;
+	// display: table;
+	// margin:auto;
+	// margin-top: 20px;
+	// padding-left: 40px;
+	// padding-right: 40px;
+	// text-transform: uppercase;
+}
+.uni_btn {
+	@include btn(#fff, $btn_col, 24px, $btn_col);
 }
 .contact_us_btn {
 	@include btn(#fff, $main_green, 16px, $main_green);
