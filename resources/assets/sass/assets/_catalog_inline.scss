@@ -1,0 +1,141 @@
+// CATALOG_INLINE
+	$catalog_inline_width: 100% - $left_sidebar_width - 5% ;//ALL CATALOG WIDTH CHANGE -5% IF NEDDED
+	$catalog_inline_margin: (100% - $catalog_inline_width - $left_sidebar_width)/2 - $left_sidebar_margin; //MARGIN FOR CATALOG FOR BOTH SIDES ADD RIGHT_SIDEBAR IF NEEDED
+	$catalog_inline_padding: 5px; //ALL CATALOG PADDING
+	// ITEM
+		$catalog_inline_item_height: 245px; //ITEM BLOCK HEIGHT
+		$catalog_inline_item_padding: 25px 80px 13px 22px; //ITEM BLOCK PADDING
+		$catalog_inline_item_color: #fff;//ITEM BACKGROUND
+		$catalog_inline_item_img_width: 172px; //ITEM IMAGE WIDTH
+		$catalog_inline_item_img_height: 172px; //ITEM IMAGE HEIGHT
+		$catalog_inline_item_img_margin_top: ($catalog_inline_item_height - $catalog_inline_item_img_height - 20px)/2;//MARGIN FOR IMG BLOCK 25 - FIRST VALUE IN ITEM PADDING
+		$catalog_inline_item_title_size: 18px; //FONT-SIZE FOR ITEM TITLE
+		$catalog_inline_item_title_width: 95%; //WIDTH OF ITEM TITLE
+		$catalog_inline_item_title_height: 30px; //HEIGHT OF ITEM TITILE
+		$catalog_inline_item_table_color: #cecece; //COLOR FOR TABLE PARAMS
+
+.catalog_inline {
+	width: $catalog_inline_width;
+	display: inline-block;
+	float: right;
+	vertical-align: middle;
+	margin: auto $catalog_inline_margin auto $catalog_inline_margin;
+	overflow: auto;
+	padding: $catalog_inline_padding;
+}
+.item {
+	width: 100%;
+	max-height: $catalog_inline_item_height;
+	min-height: $catalog_inline_item_height;
+	padding: $catalog_inline_item_padding;
+	margin-bottom: 20px;
+	overflow: hidden;
+	// border-radius: 5px;
+	background: $catalog_inline_item_color;
+	border: 1px solid #e5e5e5;
+	// @include box-shadow(2px 2px 17px #cecece);//CHANGE COLOR AND PARAMS
+}
+.item_img_block {
+	display: inline-block;
+	float: left;
+	vertical-align: top;
+	overflow: auto;
+	max-width: $catalog_inline_item_img_width;
+	min-width: $catalog_inline_item_img_width;
+	max-height: $catalog_inline_item_img_height;
+	min-height: $catalog_inline_item_img_height;
+	// margin-top: $catalog_inline_item_img_margin_top;
+	line-height: 12;
+}
+.item_img {
+	max-width: $catalog_inline_item_img_width;
+	max-height: $catalog_inline_item_img_height;
+}
+.title_block {
+	// float: left;
+	position: relative;
+	@include height_overflow(item_title, $catalog_inline_item_title_height, ($catalog_inline_item_title_height*0.5), #fff, 75%, #eee);
+	margin-bottom: 10px;
+	color: $main_black;
+	a {
+		color: inherit;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+.item_title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: $catalog_inline_item_title_size;
+	max-width: $catalog_inline_item_title_width;
+	min-width: $catalog_inline_item_title_width;
+	max-height: $catalog_inline_item_title_height;
+	min-height: $catalog_inline_item_title_height;
+}
+.item_description_block {
+	display: inline-block;
+	margin-top: 48px;
+	margin-left: 30px;
+}
+.item_params {
+	font-size: 18px;
+	color: $main_black;
+	font-weight: 200;
+	line-height: 1;
+	td {
+		padding-right: 5px;
+		padding-top: 5px;
+	}
+}
+.price_and_add {
+	float: right;
+	// margin-right: 75px;
+	overflow: auto;
+	// padding-top: 10px;
+	// margin-top: 50px;
+}
+.item_price_and_proc {
+	float: left;
+	margin-right: 50px;
+	font-size: 18px;
+	color: inherit;
+	.item_price {
+		overflow: hidden;
+	}
+	.price, .currency {
+		display: inline-block;
+		color: $main_blue;
+		font-size: 24px;
+		margin-bottom: 11px;
+	}
+	.price {
+		float: left;
+		margin-right: 10px;
+	}
+	.currency {
+		float: right;
+	}
+	.item_proc {
+		color: #3b7705;
+		font-size: 16px;
+	}
+}
+.item_add {
+	// float: right;
+	text-transform: uppercase;
+	margin-top: 15px;
+	// overflow: hidden;
+	// display: inline-block;
+	.add_to_chart {
+		display: inline-block;
+	}
+	.catalog_order {
+		font-size: 13px;
+		padding-left: 45px;
+		padding-right: 54px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		border-radius: 7px;
+	}
+}
