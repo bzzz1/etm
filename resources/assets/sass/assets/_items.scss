@@ -1,0 +1,26 @@
+.catalog {
+	padding: 36px 17px 36px 30px;
+	overflow: hidden;
+	.breadcrumb {
+		display: inline-block;
+		margin-bottom: 0;
+		float: left;
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-left: 147px;
+		margin-bottom: 40px;
+	}
+	.top {
+		overflow: hidden;
+	}
+}
+.cryteria_heading {
+	text-transform: uppercase;
+	font-size: 18px;
+	color: $main_black;
+	display: inline-block;
+	float: left;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-bottom: 40px;
+}

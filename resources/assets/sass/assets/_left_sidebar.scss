@@ -1,0 +1,26 @@
+// LEFT_SIDEBAR
+	$left_sidebar_width: 26%;//SIDEBAR WIDTH
+	$left_sidebar_height: 780px;// SIDEBAR MIN HEIGHT
+	$left_sidebar_shadow: 2px 3px 7px #757171; // SIDEBAR BOX SHADOW
+	$left_sidebar_border_radius: 5px; // SIDEBAR RADIUS
+	$left_sidebar_margin: 1%;//SIDEBAR MARGIN
+.for_line {
+	overflow: hidden;
+	display: inline-block;
+	width: $left_sidebar_width;
+	padding-right: 11px;
+	border-right: 1px solid #e5e5e5;
+}
+.left_sidebar {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	min-height: $left_sidebar_height;
+	// box-shadow: $left_sidebar_shadow;
+	border-radius: $left_sidebar_border_radius;
+	padding: 15px;
+	margin-right: $left_sidebar_margin;
+	float: left;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+}
