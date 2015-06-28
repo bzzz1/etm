@@ -1,0 +1,40 @@
+.main_content {
+	.search {
+		width: 100%;
+		display: block;
+		position: relative;
+		margin-bottom: 20px;
+		overflow: hidden;
+		.index_normal_search_input,
+		.index_double_search_input,
+		.category_select {
+			width: 100%;
+			padding-left: 45px;
+			font-size: 18px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			min-height: 43px;
+			background-color: #f0f0f0;
+			font-family: $main_font;
+			font-weight: 300;
+		}
+		.fa {
+			position: absolute;
+			top: 11%;
+			left: 1%;
+			color: #979797;
+		}
+		.double {
+			overflow: hidden;
+			display: none;
+		}
+		.left,
+		.right {
+			width: 50%;
+			margin-top: 0;
+		}
+		.category_select {
+			height: 43px;
+		}
+	}
+}
