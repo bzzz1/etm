@@ -201,15 +201,21 @@ return [
 		'Carbon' 	=> 'Carbon\Carbon',
 		'Faker'		=> 'Faker\Factory',
 
+
 		/*------------------------------------------------
 		| MODELS
 		------------------------------------------------*/
-		'Estate' 	=> 'App\Estate',
-		'Image' 	=> 'App\Image',
-		'District'  => 'App\District',
-		'Town'  	=> 'App\Town',
-		'Article'   => 'App\Article',
-		'User'		=> 'App\User'
+		'Image'		=> 'App\Image',
+		'Item'		=> 'App\Item',
+		'Article'	=> 'App\Article',
+		'New'		=> 'App\New',
+		'Producer'	=> 'App\Producer',
+		'Order'		=> 'App\Order',
+		'Unit'		=> 'App\Unit',
+		'Feedback'	=> 'App\Feedback',
+		'User'		=> 'App\User',
+		'Kind'		=> 'App\Kind',
+		'Filter'	=> 'App\Filter',
 	],
 
 ];

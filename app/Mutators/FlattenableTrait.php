@@ -1,4 +1,4 @@
-<?php namespace Mutators;
+<?php namespace App\Mutators;
 
 use App\BaseCollection;
 

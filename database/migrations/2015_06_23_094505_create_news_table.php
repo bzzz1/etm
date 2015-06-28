@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArticlesTable extends Migration {
+class CreateNewsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class CreateArticlesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('articles', function(Blueprint $table)
+		Schema::create('news', function(Blueprint $table)
 		{
-			$table->increments('article_id');
+			$table->increments('new_id');
 			$table->string('title', 128);
 			$table->integer('image_id')->unsigned()->index()->nullable();
 			$table->text('body');
@@ -29,7 +29,7 @@ class CreateArticlesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('articles');
+		Schema::drop('news');
 	}
 
 }

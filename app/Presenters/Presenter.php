@@ -1,4 +1,4 @@
-<?php namespace Presenters;
+<?php namespace App\Presenters;
 
 abstract class Presenter {
 	protected $entity;

@@ -1,6 +1,6 @@
-<?php namespace Presenters;
+<?php namespace App\Presenters;
 
-use Presenters\Presenter;
+use App\Presenters\Presenter;
 
 class Item extends Presenter {	
 	public function price() {
