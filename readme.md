@@ -14,7 +14,7 @@ Here are the critical functions that we need to develop.
 1. Catalog
 
 	
-	1.1 Import from excel
+	1.1 Import from csv
 	
 	1.2 AJAX page load
 	
@@ -40,6 +40,8 @@ Here are the critical functions that we need to develop.
 	
 	2.4 Robokassa
 	
+	2.5 Cart
+	
 3. Additional features that can be done after a deadline
 
 	3.1 Import from letter
@@ -49,6 +51,8 @@ Here are the critical functions that we need to develop.
 	3.3 All orders in admin page
 	
 	3.4 Watermarks in two copies
+	
+	3.5 ...
 
 ## Overview and results of client meetings
 
